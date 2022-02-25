@@ -30,7 +30,7 @@ public class Knap01sack {
             for (int j = 0; j <= M; j++) {
                 B[i][j] = B[i - 1][j];
 
-                if ((j >= W[i - 1]) && (B[i][j] < B[i - 1][j - W[i - 1]] + V[i - 1])) {
+                if ((j >= W[i - 1]) && (B[i][j] < B[i ][j - W[i - 1]] + V[i - 1])) {
                     B[i][j] = B[i - 1][j - W[i - 1]] + V[i - 1];
                 }
             }

@@ -26,7 +26,8 @@ public class Get3StringsLCS {
             return dp[i][j][k];
         }
         if( str.charAt(i) == str2.charAt(j) || str2.charAt(j) == str3.charAt(k)){
-            return dp[i][j][k] = getLCS( str, str2, str3, i + 1, j + 1, k + 1, dp) + 1;
+            return dp[i][j][k] = getLCS( str, str2, str3, i + 1
+                    , j + 1, k + 1, dp) + 1;
         }else {
            return dp[i][j][k] = Math.max(Math.max(getLCS( str, str2, str3, i + 1, j, k, dp ), getLCS( str, str2, str3, i, j + 1,  k, dp)), getLCS( str,  str2,  str3,  i,  j,  k + 1, dp));
         }

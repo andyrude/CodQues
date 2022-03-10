@@ -4,9 +4,9 @@ import linkedList.Node;
 import linkedList.node.ListNode;
 
 public class findMiddleNode {
-    public ListNode middleNode(ListNode head){
-        ListNode fast = head;
-        ListNode slow = head;
+    public Node middleNode(Node head){
+        Node fast = head;
+        Node slow = head;
         while ( fast.next != null && fast.next.next != null){
             slow = slow.next;
             fast = fast.next.next;

@@ -1,4 +1,4 @@
-package linkedList.programs;
+package linkedList.node;
 
 import linkedList.LinkedListImpl;
 

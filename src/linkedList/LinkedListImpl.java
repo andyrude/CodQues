@@ -1,5 +1,7 @@
 package linkedList;
 
+import linkedList.node.ListNode;
+
 public class LinkedListImpl {
 
     private Node head;
@@ -10,19 +12,23 @@ public class LinkedListImpl {
         head = new_node;
     }
 
+    public Node getHead(){
+        return this.head;
+    }
+
     public void createNodes() {
         Node node1 = new Node(34);
         Node node2 = new Node(11);
         Node node3 = new Node(84);
         Node node4 = new Node(10);
-        Node node5 = new Node(55);
+        Node node5 = new Node(25);
 
         head = node1;
         node1.next = node2;
         node2.next = node3;
         node3.next = node4;
         node4.next = node5;
-        node5.next = null;
+        node5.next = node1;
     }
 
     public Node array() {

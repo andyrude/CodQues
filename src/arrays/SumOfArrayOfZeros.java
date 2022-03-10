@@ -1,6 +1,7 @@
 package arrays;
 
 public class SumOfArrayOfZeros {
+
     public static void main(String[] args) {
         int[] arr = {0,0,0,6,0,0};
         System.out.println( find( arr));
@@ -13,11 +14,9 @@ public class SumOfArrayOfZeros {
         for ( int i = 0; i < arr.length; i++){
             if ( arr[i] == 0){
                 c++;
-                count = count + c;
-                check = check + count;
+                check = check + c;
             }else {
                 c = 0;
-                count = 0;
             }
         }
         return check;

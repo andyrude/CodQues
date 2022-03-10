@@ -22,13 +22,15 @@ public class LinkedListImpl {
         Node node3 = new Node(84);
         Node node4 = new Node(10);
         Node node5 = new Node(25);
+        Node node6 = new Node(30);
 
         head = node1;
         node1.next = node2;
         node2.next = node3;
         node3.next = node4;
         node4.next = node5;
-        node5.next = null;
+        node5.next = node6;
+        node6.next = null;
     }
 
     public Node array() {

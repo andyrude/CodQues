@@ -8,7 +8,6 @@ public class SumOfArrayOfZeros {
     }
 
     private static int find(int[] arr) {
-        int count = 0;
         int c = 0;
         int check = 0;
         for ( int i = 0; i < arr.length; i++){

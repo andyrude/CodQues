@@ -186,7 +186,7 @@ public class BinaryTree {
         queue.add(root);
         while (!queue.isEmpty()) {
             Node removed = queue.remove();
-            System.out.print(removed.data + " ");
+              System.out.print(removed.data + " ");
             if (removed.left != null) {
                 helper.add(removed.left);
             }

@@ -137,4 +137,17 @@ public class BinaryTree {
         System.out.print( node.data + " -->");
         inOrder( node.right);
     }
+
+    public void preOrder(){
+        preOrder( root);
+    }
+
+    private void preOrder( Node node){
+        if ( node == null){
+            return;
+        }
+        System.out.print( node.data + "-->");
+        preOrder( node.left);
+        preOrder(node.right);
+    }
 }

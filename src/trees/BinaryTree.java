@@ -71,4 +71,32 @@ public class BinaryTree {
             return;
     }
 
+    public boolean find(int item){
+        return find( item, this.root);
+    }
+
+    private boolean find( int item, Node node){
+        if( node == null){
+            return false;
+        }
+
+        if ( item == node.data){
+            return true;
+        }
+        return find( item, node.left) || find( item, node.right);
+    }
+
+    public int min(){
+        return min( root);
+    }
+
+    private int min( Node node){
+        if ( node == null){
+            return Integer.MAX_VALUE;
+        }
+        int self_min = node.data;
+        int left_min = min( node.left);
+        int right_min = min( node.right);
+        return Math.min( self_min, ( Math.min( left_min, right_min)));
+    }
 }

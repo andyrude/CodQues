@@ -39,28 +39,36 @@ public class BinaryTree {
         return nn;
         }
 
-    public void Display(){
-        this.Display( root);
+    public Node getRoot() {
+        return root;
     }
 
     public void setRoot(Node root) {
         this.root = root;
     }
 
-    private void Display(Node node){
-        String str = "<-" + String.valueOf(node.data ) + "->";
-        if ( node.left != null){
-            str = node.left.data + str;
-        }else {
-            str = "." + str;
-        }
-        if ( node.right != null){
-            str = node.right.data + str;
-        }else {
-            str = str + ".";
-        }
-        Display( node.left);
-        Display( node.right);
+    public void Display(){
+        this.Display( root);
+    }
+
+    public void Display(Node node){
+        if ( node != null) {
+            String str = "<-" + node.data + "->";
+            if (node.left != null) {
+                str = node.left.data + str;
+            } else {
+                str = "." + str;
+            }
+            if (node.right != null) {
+                str = str + node.right.data;
+            } else {
+                str = str + ".";
+            }
+            System.out.println(str);
+            Display(node.left);
+            Display(node.right);
+        }else
+            return;
     }
 
 }

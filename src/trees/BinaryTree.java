@@ -99,4 +99,42 @@ public class BinaryTree {
         int right_min = min( node.right);
         return Math.min( self_min, ( Math.min( left_min, right_min)));
     }
+
+    public int size(){
+        return size( this.root);
+    }
+
+    private int size( Node node){
+        if ( node == null){
+            return 0;
+        }
+        int ls = size( node.left);
+        int rs = size( node.right);
+        return ls + rs + 1;
+    }
+
+    public int height(){
+        return height( root);
+    }
+
+    private int height( Node node){
+        if ( node == null){
+            return -1;
+        }
+        int lh = height( node.left);
+        int rh = height( node.right);
+        return Math.max( lh, rh) + 1;
+    }
+
+    public void inOrder(){
+        inOrder( this.root);
+    }
+    private void inOrder( Node node){
+        if ( node == null){
+            return;
+        }
+        inOrder( node.left);
+        System.out.print( node.data + " -->");
+        inOrder( node.right);
+    }
 }

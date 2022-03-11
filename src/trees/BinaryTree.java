@@ -150,4 +150,17 @@ public class BinaryTree {
         preOrder( node.left);
         preOrder(node.right);
     }
+
+    public void postOrder(){
+        postOrder( root);
+    }
+
+    private void postOrder( Node node){
+        if ( node == null){
+            return;
+        }
+        postOrder( node.left);
+        postOrder( node.right);
+        System.out.print( node.data + "-->");
+    }
 }

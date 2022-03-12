@@ -50,6 +50,18 @@ public class RightViewBinaryTrees {
         }
     }
 
+    public void leftSideView( Node node, int current_level){
+        if ( node == null){
+            return;
+        }
+        if ( max_depth < current_level){
+            System.out.println( node.data);
+            max_depth = current_level;
+        }
+        leftSideView(node.left, current_level + 1 );
+        leftSideView( node.right, current_level + 1);
+    }
+
     public Node buildTreeUsingLevelOrderTraversal(){
         Scanner sc = new Scanner(System.in);
         Queue<Node> queue = new LinkedList<>();

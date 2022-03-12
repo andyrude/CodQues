@@ -4,10 +4,10 @@ import java.util.*;
 
 public class BinaryTree {
 
-    public class Node {
+    public static class Node {
         int data;
-        Node left;
-        Node right;
+        public Node left;
+        public Node right;
 
         public Node() {
         }
@@ -21,9 +21,9 @@ public class BinaryTree {
 
     private Node root;
 
-    public BinaryTree() {
-        root = create_Tree();
-    }
+    //public BinaryTree() {
+    //    root = create_Tree();
+    //}
 
     private Node create_Tree() {
         int item = sc.nextInt();
@@ -47,9 +47,6 @@ public class BinaryTree {
         this.root = root;
     }
 
-    public void Display() {
-        this.Display(root);
-    }
 
     public void Display(Node node) {
         if (node != null) {

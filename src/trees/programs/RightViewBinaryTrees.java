@@ -2,6 +2,7 @@ package trees.programs;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 public class RightViewBinaryTrees {
     public class Node {
@@ -16,7 +17,7 @@ public class RightViewBinaryTrees {
             this.data = data;
         }
     }
-    int max_depth = 0;
+    int max_depth = -1;
     public void rightViewBinaryWOQueue( Node node, int current_level){
         if ( node == null){
             return;
@@ -47,5 +48,30 @@ public class RightViewBinaryTrees {
                 helper = new LinkedList<>();
             }
         }
+    }
+
+    public Node buildTreeUsingLevelOrderTraversal(){
+        Scanner sc = new Scanner(System.in);
+        Queue<Node> queue = new LinkedList<>();
+        Queue<Node> helper = new LinkedList<>();
+        int k = sc.nextInt();
+        Node root = new Node(k);
+        queue.add( root);
+        while ( !queue.isEmpty()){
+            Node rem = queue.remove();
+            int leftD = sc.nextInt();
+            int rightD = sc.nextInt();
+            if ( leftD != -1){
+                Node left = new Node( leftD);
+                rem.left = left;
+                queue.add( left);
+            }
+            if ( rightD != -1){
+                Node right = new Node( rightD);
+                rem.right = right;
+                queue.add( right);
+            }
+        }
+        return root;
     }
 }

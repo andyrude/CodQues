@@ -6,12 +6,13 @@ public class MergeTwoSortedLists {
     public ListNode mergeTwoSortedList( ListNode listNode1, ListNode list2){
 
         ListNode dummyNode = new ListNode( - 1);
-        ListNode head = dummyNode;
+        Node head = new Node();
+
         if ( listNode1.val >= list2.val){
-            head.val = list2.val;
+            head.data = list2.val;
 
         }else {
-            head.val = listNode1.val;
+            head.data = listNode1.val;
         }
         while ( listNode1 != null && list2 != null ){
             if ( listNode1.val <= list2.val){
@@ -30,5 +31,19 @@ public class MergeTwoSortedLists {
             dummyNode.next = listNode1;
         }
         return dummyNode.next;
+    }
+
+}
+
+class Node{
+    public int data;
+    public Node next;
+
+    public Node() {
+
+    }
+
+    public Node(int data) {
+        this.data = data;
     }
 }

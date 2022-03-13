@@ -22,10 +22,11 @@ public class SymmetricTrees {
         if ( (node1 == null && node2 !=  null) || ( node2 == null && node1 != null)){
             return false;
         }
-        boolean get =  SymmetricTrees( node1.left, node2.right) && SymmetricTrees( node2.left, node1.right);
-        if ( (node1.data == node2.data) && get){
-            return true;
+        if ( node1.data == node2.data){
+            return ( SymmetricTrees( node1.left, node2.right) && SymmetricTrees( node1.right, node2.left));
         }
         return false;
     }
+
+
 }

@@ -9,7 +9,7 @@ class PrintTime implements Runnable
         {
             for(int i=1;i<=10;i++)
             {
-                Thread.sleep(2);
+                Thread.sleep(2000);
                 System.out.println(i);
             }
         }

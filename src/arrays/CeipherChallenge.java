@@ -9,7 +9,7 @@ public class CeipherChallenge {
        int n = sc.nextInt();
         System.out.println(sol(str , n));
     }
-     public static String  sol( String str, int n){
+     public static String sol( String str, int n){
         String p = "";
         for( int i = 0; i < str.length(); i++){
           int k = (int)str.charAt(i);

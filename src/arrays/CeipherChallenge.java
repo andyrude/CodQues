@@ -21,7 +21,7 @@ public class CeipherChallenge {
                   int m = 65 + (k + n) - 91;
                   char c = (char)m;
                   p = p + c;
-                  continue;
+
               }else{
                   char c = (char) ((char)k+n);
                   p = p + c;
@@ -31,7 +31,6 @@ public class CeipherChallenge {
                   int m = 97 + (k + n) - 122;
                   char c = (char)m;
                   p = p + c;
-                  continue;
               }else{
                   char c = (char) ((char)k+n);
                   p = p + c;

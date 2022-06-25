@@ -18,7 +18,7 @@ public class CeipherChallenge {
           }
           else if( k >= 65 && k <=91){
               if( k + n > 91){
-                  int m = 65 + (k + n ) - 91;
+                  int m = 65 + (k + n) - 91;
                   char c = (char)m;
                   p = p + c;
                   continue;
@@ -28,7 +28,7 @@ public class CeipherChallenge {
               }
           }else if( k >= 97 && k <=122){
               if( k + n > 122){
-                  int m = 97 + (k + n ) - 122;
+                  int m = 97 + (k + n) - 122;
                   char c = (char)m;
                   p = p + c;
                   continue;
@@ -41,5 +41,4 @@ public class CeipherChallenge {
         }
         return p;
     }
-
 }

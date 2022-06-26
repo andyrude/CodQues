@@ -19,8 +19,7 @@ public class NewClass {
         System.out.println(al);
     }
 
-    private static void findsubsequences(String s,
-                                         String ans)
+    private static void findsubsequences(String s, String ans)
     {
         if (s.length() == 0) {
             al.add(ans);

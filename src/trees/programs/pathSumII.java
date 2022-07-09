@@ -12,20 +12,14 @@ public class pathSumII {
         return list;
     }
 
-    private static List<Integer> pathSum2(TreeNode root, int targetSum, ArrayList<Integer> integers) {
-        integers.add( root.val);
-        if( root == null){
-            integers.remove( integers.size() - 1);
-            return integers;
-        }
-        if( targetSum == root.val){
-            list.add( integers);
-            integers.remove( integers.size() - 1);
-            return integers;
-        }
-        pathSum2( root.left, targetSum - root.val, integers);
-        pathSum2( root.right, targetSum - root.val, integers);
-        return integers;
+    private static void pathSum2(TreeNode root, int targetSum, ArrayList<Integer> integers) {
+       if( root.left == null && root.right == null && targetSum  == -1){
+           list.add( integers);
+       }
+       integers.add( root.val);
+       pathSum2( root.left, targetSum - root.val, integers);
+       pathSum2( root.right, targetSum - root.val, integers);
+       integers.remove( integers.size() - 1);
     }
 }
 class TreeNode {

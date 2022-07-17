@@ -1,4 +1,4 @@
-package trying;
+package arrays;
 
 import java.util.Arrays;
 

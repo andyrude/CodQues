@@ -30,8 +30,9 @@ public class DistinctSubsequences {
                 }
             }
         }
-        for( int i = 0; i < s.length(); i++){
-            System.out.println( Arrays.toString( dp[i]));
+
+        for( int i = 0; i <=  len1; i++){
+            System.out.println(Arrays.toString( dp[i]));
         }
         return dp[0][0];
     }

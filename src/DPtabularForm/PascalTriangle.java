@@ -1,5 +1,6 @@
 package DPtabularForm;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -9,28 +10,34 @@ public class PascalTriangle {
     public static void main(String[] args) {
         Scanner sc = new Scanner( System.in);
         int n = sc.nextInt();
-        System.out.println(Arrays.toString( getSol( n)));
+        System.out.println(getSol( n));
     }
 
-    private static int[] getSol(int n) {
+    private static List<List<Integer>> getSol(int n) {
+        List<List<Integer>> list = new ArrayList<>();
+        List<Integer> li = new ArrayList<>();
+        li.add(1);
+        list.add(new ArrayList<>(li));
         if( n == 1){
-            int[] arr = {1};
-            return arr;
+            return list;
         }
+
+        li.add( 1);
+        list.add(new ArrayList<>(li));
         if( n == 2){
-            int[] arr = {1,1};
-            return arr;
+            return list;
         }
-        int[][] arr = new int[n][n];
-        arr[0][0] = 1;
-        arr[1][0] = 1;
-        arr[1][1] = 1;
-        for(int i=2; i<=n; i++){
-            for(int j=0; j<=i; j++){
-                if(j==0 || j==i) arr[i][j]=1;
-                else arr[i][j] = arr[i-1][j-1]+arr[i-1][j];
+
+        for( int  i = 3; i <= n ; i++){
+            List<Integer> li2 = new ArrayList<>();
+            li2.add( li.get(0));
+            for ( int j = 1; j < li.size(); j++){
+                li2.add( li.get( j - 1) + li.get(j ));
             }
+            li2.add( li.get( li.size() - 1));
+            li = li2;
+            list.add( li2);
         }
-        return arr[n - 1];
+        return list;
     }
 }

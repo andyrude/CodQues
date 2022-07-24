@@ -14,7 +14,7 @@ public class PS1 {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<IntegerRe, IntegerRe> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             if (map.containsKey(arr[i])) {
                 int k = map.get(arr[i]);

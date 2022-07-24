@@ -10,8 +10,8 @@ public class Triangle {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner( System.in);
-        List<List<Integer>> list = new ArrayList<>();
-        List<Integer> li = new ArrayList<>();
+        List<List<IntegerRe>> list = new ArrayList<>();
+        List<IntegerRe> li = new ArrayList<>();
         li.add( 2);
         list.add( li);
         li = new ArrayList<>();
@@ -33,12 +33,12 @@ public class Triangle {
         getsol( list);
     }
 
-    private static int getsol(List<List<Integer>> list) {
+    private static int getsol(List<List<IntegerRe>> list) {
         int[][] arr = new int[ list.size()][ list.get( list.size() - 1).size()];
         for( int i = 0; i < list.size() - 1; i++){
-            Arrays.fill( arr[i], Integer.MAX_VALUE);
+            Arrays.fill( arr[i], IntegerRe.MAX_VALUE);
         }
-        System.out.println( Integer.MAX_VALUE);
+        System.out.println( IntegerRe.MAX_VALUE);
         arr[0][0] = list.get(0).get(0);
         for( int i = 0; i < list.size() - 1; i++){
             for( int j = 0; j <= i; j++){

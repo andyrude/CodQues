@@ -12,7 +12,7 @@ public class FiboII {
 
     private static int fiboN(int n) {
         int a=1,b=0,c;
-        while(n-->0){
+        while(n--> 0){
             c=a+b;
             a=b;
             b=c;

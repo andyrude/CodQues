@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PascalTrianglaII {
 
-    public static List<Integer> getRow( int N){
+    public static List<IntegerRe> getRow(int N){
         if(N==0) return Arrays.asList(1);
         int dp[][] = new int[N+1][N+1];
         dp[0][0]=1;

@@ -1,6 +1,5 @@
 package dynamicprogramming;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class JumpGameII {
@@ -9,7 +8,7 @@ public class JumpGameII {
         String[] arr = sc.nextLine().split(" ");
         int[] intArr = new int[arr.length];
         for( int i = 0; i < args.length; i++){
-            intArr[i] = Integer.parseInt(arr[i]);
+            intArr[i] = IntegerRe.parseInt(arr[i]);
         }
         int currIndex = args.length - 1;
         for ( int i = args.length;  i >= 0; i--){
